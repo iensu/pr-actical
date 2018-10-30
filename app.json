@@ -1,0 +1,9 @@
+{
+  "name": "PR-actical",
+  "repository": "https://github.com/iensu/pr-actical",
+  "env": {
+    "NODE_ENV": "production",
+    "PRACTICAL_GITHUB_TOKEN": { "required": true },
+    "PRACTICAL_REPOS": { "required": true }
+  }
+}

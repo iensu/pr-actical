@@ -1,0 +1,45 @@
+{
+  "name": "pr-actical",
+  "version": "0.0.1",
+  "engines": {
+    "node": "10.13.0"
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npm run build",
+    "start": "node index.js",
+    "start:dev": "env-cmd .env nodemon index.js",
+    "build": "npm run build:js; npm run build:css",
+    "build:css": "postcss src/assets/styles.css -o public/styles.css",
+    "build:css:watch": "postcss src/assets/styles.css -o public/styles.css --watch",
+    "build:js": "browserify src/app/app.js -o public/bundle.js",
+    "build:js:watch": "watchify src/app/app.js -o public/bundle.js"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "basic-auth": "^2.0.1",
+    "choo": "^6.13.1",
+    "express": "^4.16.4",
+    "graphql-request": "^1.8.2"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "budo": "^11.5.0",
+    "choo-devtools": "^2.5.1",
+    "env-cmd": "^8.0.2",
+    "eslint": "^5.8.0",
+    "nodemon": "^1.18.5",
+    "postcss-cli": "^6.0.1",
+    "postcss-preset-env": "^6.3.0",
+    "prettier": "^1.14.3",
+    "watchify": "^3.11.0"
+  },
+  "postcss": {
+    "map": false,
+    "plugins": {
+      "postcss-preset-env": {}
+    }
+  }
+}
