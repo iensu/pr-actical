@@ -1,3 +1,5 @@
+const helpers = require('../helpers.js');
+
 module.exports = (state, emitter) => {
   state.github = {
     prs: null,
@@ -12,7 +14,7 @@ module.exports = (state, emitter) => {
     fetch('/api/prs')
       .then((response) => response.json())
       .then((prs) => {
-        state.github.prs = prs;
+        state.github.prs = prs.sort(helpers.sortByCreatedAt);
         state.github.fetching = false;
         emitter.emit(state.events.RENDER);
       })
