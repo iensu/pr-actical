@@ -5,7 +5,7 @@ const mainPage = require('./views/main-page.js');
 const app = choo();
 
 if (process.env.NODE_ENV !== 'production') {
-  app.use(require('choo-devtools'));
+  app.use(require('choo-devtools')());
 }
 
 app.use(githubStore);
