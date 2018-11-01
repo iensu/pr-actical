@@ -25,12 +25,12 @@ function getPRStatus(pr) {
     return 'Changes requested';
   }
 
-  if (mergeable && mergeable.match(/MERGEABLE|UNKNOWN/) && (!review || review === 'DISMISSED')) {
-    return 'Review needed';
-  }
-
   if (mergeable !== 'MERGEABLE') {
     return 'Update needed';
+  }
+
+  if (!review || review === 'DISMISSED') {
+    return 'Review needed';
   }
 
   if (mergeable === 'MERGEABLE' && review === 'APPROVED') {
