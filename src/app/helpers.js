@@ -8,7 +8,7 @@ function timeElapsed(dateString) {
 
   return {
     time: hours < 24 ? hours : (hours / 24) | 0,
-    unit: hours < 24 ? 'hour(s)' : 'day(s)',
+    unit: hours < 24 ? 'hour' : 'day',
   };
 }
 
@@ -40,12 +40,12 @@ function getPRStatus(pr) {
   return 'Unknown status';
 }
 
-function sortByCreatedAt(a, b) {
-  return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+function sortByUpdatedAt(a, b) {
+  return new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime();
 }
 
 module.exports = {
   timeElapsed,
   getPRStatus,
-  sortByCreatedAt,
+  sortByUpdatedAt,
 };

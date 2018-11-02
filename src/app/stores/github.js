@@ -14,7 +14,7 @@ module.exports = (state, emitter) => {
     fetch('/api/prs')
       .then((response) => response.json())
       .then((prs) => {
-        state.github.prs = prs.sort(helpers.sortByCreatedAt);
+        state.github.prs = prs.sort(helpers.sortByUpdatedAt);
         state.github.fetching = false;
         emitter.emit(state.events.RENDER);
       })

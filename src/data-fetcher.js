@@ -21,6 +21,8 @@ const getPRsForRepo = (client, owner, name) => {
               additions
               deletions
               mergeable
+              updatedAt
+              changedFiles
               author {
                 avatarUrl
                 login
