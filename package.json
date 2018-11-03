@@ -10,7 +10,7 @@
     "postinstall": "npm run build",
     "start": "node index.js",
     "start:dev": "env-cmd .env nodemon index.js",
-    "build": "npm run build:js; npm run build:css",
+    "build": "npm run build:js && npm run build:css",
     "build:css": "postcss src/assets/styles.css -o public/styles.css",
     "build:css:watch": "postcss src/assets/styles.css -o public/styles.css --watch",
     "build:js": "browserify src/app/app.js -o public/bundle.js",
