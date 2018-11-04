@@ -14,19 +14,11 @@ const dataFetcher = require('./data-fetcher.js')(client);
 
 const server = express();
 
-const log = (x) => {
-  console.log(JSON.stringify(x, null, 2));
-  return x;
-};
-
 let data = [];
 const fetchInterval = 5 * 60 * 1000;
 
 const updateData = () => {
-  dataFetcher
-    .getPRs(config.repos)
-    .then(log)
-    .then((prs) => (data = prs));
+  dataFetcher.getPRs(config.repos).then((prs) => (data = prs));
 };
 
 server.use(auth);

@@ -1,0 +1,66 @@
+{
+  "repository": {
+    "name": "my-repo",
+    "url": "https://github.com/repo-owner/my-repo",
+    "pullRequests": {
+      "edges": [
+        {
+          "node": {
+            "title": "Remove unnecessary release steps",
+            "url": "https://github.com/repo-owner/my-repo/pull/130",
+            "createdAt": "2018-11-01T16:24:09Z",
+            "additions": 2,
+            "deletions": 2,
+            "mergeable": "MERGEABLE",
+            "updatedAt": "2018-11-02T07:47:55Z",
+            "changedFiles": 1,
+            "author": {
+              "avatarUrl": "https://avatars0.githubusercontent.com/u/6079136?v=4",
+              "login": "bokls"
+            },
+            "labels": {
+              "edges": []
+            },
+            "reviews": {
+              "edges": [
+                {
+                  "node": {
+                    "state": "CHANGES_REQUESTED"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "title": "Send automatic emails",
+            "url": "https://github.com/repo-owner/my-repo/pull/131",
+            "createdAt": "2018-11-02T16:49:00Z",
+            "additions": 1277,
+            "deletions": 885,
+            "mergeable": "MERGEABLE",
+            "updatedAt": "2018-11-02T18:59:25Z",
+            "changedFiles": 25,
+            "author": {
+              "avatarUrl": "https://ava1.githubusercontent.com/u/22369293?v=4",
+              "login": "asdfg"
+            },
+            "labels": {
+              "edges": [
+                {
+                  "node": {
+                    "name": "WIP"
+                  }
+                }
+              ]
+            },
+            "reviews": {
+              "edges": []
+            }
+          }
+        }
+      ]
+    }
+  }
+}
