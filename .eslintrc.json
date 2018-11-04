@@ -5,7 +5,7 @@
   },
   "extends": "eslint:recommended",
   "parserOptions": {
-    "ecmaVersion": 2017
+    "ecmaVersion": 2018
   },
   "rules": {
     "indent": [
@@ -28,5 +28,23 @@
       "error",
       { "varsIgnorePattern": "^_" }
     ]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["test/*.test.js", "test/**/*.test.js"],
+      "env": {
+        "mocha": true
+      },
+      "globals": {
+        "expect": true,
+        "sinon": true
+      }
+    },
+    {
+      "files": ["src/app/*.js", "src/app/**/*.js"],
+      "env": {
+        "browser": true
+      }
+    }
+  ]
 }

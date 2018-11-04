@@ -20,6 +20,7 @@ module.exports = (state, emitter) => {
       })
       .catch((err) => {
         state.github.fetching = false;
+        // eslint-disable-next-line no-console
         console.log(err);
       });
   });

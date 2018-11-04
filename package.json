@@ -16,8 +16,11 @@
     "build:css:watch": "postcss src/assets/styles.css -o public/styles.css --watch",
     "build:js": "browserify src/app/app.js -o public/bundle.js",
     "build:js:watch": "watchify src/app/app.js -o public/bundle.js",
+    "pretest": "npm run lint",
     "test": "mocha test/*.test.js test/**/*.test.js --file ./test/setup.js",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "lint:js": "eslint src test",
+    "lint": "npm-run-all -p --aggregate-output lint:js"
   },
   "author": "",
   "license": "GPL-3.0-or-later",
